@@ -1,0 +1,78 @@
+# PART 2: Battle of the Solitude
+
+
+use_bpm 160
+
+intro = "C:/Users/bailey_delane/Downloads/Monologue.wav"
+
+note=[:fs1,:fs2,:fs1,:fs2,:fs1,:fs2,:fs1,:fs2]
+i = 0
+
+=begin
+print("songstarting")
+sample intro
+sleep 36.5
+=end
+
+8.times do
+  use_synth :piano
+  play note[i]
+  sleep 1
+  i = i + 1
+end
+
+play :c4
+sleep 1
+play :c4
+play :a3
+sleep 1
+play :c4
+sleep 0.5
+play :d4
+play :a3
+sleep 1
+play :c4
+sleep 1
+play :b3
+sleep 1
+play :a3
+sleep 1
+play :c4
+play :a3
+sleep 0.5
+play :g3
+sleep 0.5
+play :g3
+sleep 0.5
+play :a3
+sleep 0.5
+play :c4
+sleep 1
+play :c4
+sleep 1
+play :c4
+play :a3
+sleep 1
+play :c4
+sleep 0.5
+play :d4
+play :a3
+sleep 1
+play :c4
+sleep 1
+play :b3
+sleep 1
+play :a3
+sleep 1
+play :c4
+play :a3
+sleep 0.5
+play :g3
+sleep 0.5
+play :g3
+sleep 0.5
+play :a3
+sleep 0.5
+play :c4
+sleep 1
+
