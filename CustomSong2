@@ -1,3 +1,12 @@
+# PART 2: Battle of the Solitude
+
+
+use_bpm 160
+
+sample "C:/Users/bailey_delane/Downloads/Monologue.wav"
+sleep 49.9
+
+note=[:fs1,:fs2,:fs1,:fs2,:fs1,:fs2,:fs1,:fs2]
 i = 0
 
 begin
