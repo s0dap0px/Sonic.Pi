@@ -1,5 +1,46 @@
+# PART 1: The Beginning
+
 use_bpm 75
-use_debug false
+
+drum = "/Users/bailey_delane/Music/sonic_pi/drum"
+noise = "/Users/bailey_delane/Music/sonic_pi/noise"
+voice = "/Users/bailey_delane/Music/sonic_pi/voice"
+
+
+live_loop :bd do
+  sample :bd_haus, amp: 1, lpf: 130
+  sleep 1
+end
+
+
+live_loop :samples, sync: :bd do
+  sample drum, 8, beat_stretch: 4, amp: 1
+  sample noise, 0, beat_stretch: 4, amp: 0.8
+  sleep 4
+end
+
+
+live_loop :bass do
+  with_fx :reverb, room: 0.8 do
+    use_synth :dsaw
+    with_fx :bitcrusher do
+      play :E1, release: 0.2
+      sleep 0.25
+      play :E1, release: 0.2
+      sleep 0.125
+      play :E1, release: 0.2
+      sleep 0.125
+      play :E1, release: 0.2
+      sleep 0.135
+      play :E2, release: 0.2
+      sleep 0.125
+      play :E1, release: 0.2
+      sleep 0.125
+      play :E1, release: 0.2
+      sleep 0.125
+    end
+  end
+end
 
 live_loop :bd do
   sample :bd_haus, amp: 1, lpf: 130
@@ -22,7 +63,7 @@ live_loop :bass, sync: :bd do
     
     use_synth :dsaw
     with_fx :bitcrusher do
-      36.times do
+      10.times do
         2.times do
           2.times do
             play cd, release: 0.2
@@ -50,4 +91,19 @@ live_loop :bass, sync: :bd do
       
     end
   end
+  i = 0
 end
+
+
+
+live_loop :low_note do
+  play :fs1
+  sleep 1
+  play :fs2
+  sleep 1
+  play :fs1
+  sleep 1
+  play :fs2
+  sleep 1
+end
+
